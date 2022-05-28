@@ -15,6 +15,26 @@
     "build": "rimraf bin && tsc",
     "format": "prettier --write \"**/*\" --ignore-unknown"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuadop/sendchamp-simulator.git"
+  },
+  "keywords": [
+    "otp",
+    "email",
+    "sms",
+    "sendchamp",
+    "send",
+    "verification",
+    "voice",
+    "call",
+    "sender"
+  ],
+  "author": "Fuad Olatunji",
+  "bugs": {
+    "url": "https://github.com/fuadop/sendchamp-simulator/issues"
+  },
+  "homepage": "https://github.com/fuadop/sendchamp-simulator#readme",
   "dependencies": {
     "@fuadop/koa-proxy": "^1.0.0",
     "@koa/cors": "^3.3.0",
