@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import minimist from "minimist";
 import buildOptions from "minimist-options";
 import Simulator from "./app";
