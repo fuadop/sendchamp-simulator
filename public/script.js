@@ -1,34 +1,41 @@
 function parseQs() {
-  const qs = {};
-  window.location.search.substring(1).split("&").forEach((item) => {
-    const [key, value] = item.split("=").map(decodeURIComponent);
-    qs[key] = value;
-  });
-  return qs;
+	const qs = {};
+	window.location.search
+		.substring(1)
+		.split("&")
+		.forEach((item) => {
+			const [key, value] = item.split("=").map(decodeURIComponent);
+			qs[key] = value;
+		});
+	return qs;
 }
 
 window.location.qs = parseQs();
-const list = document.querySelector(".message-list")
+const list = document.querySelector(".message-list");
 
 // connect to websocket
-let socket = new WebSocket(window.location.origin.replace("http", "ws") + "/ws");
+let socket = new WebSocket(
+	window.location.origin.replace("http", "ws") + "/ws"
+);
 
 socket.onopen = () => {
-  console.log("Device connected to socket");
-  socket.send(JSON.stringify({
-    phone: window.location.qs.phone
-  }));
-  // set status to connected
-  document.querySelector(".status-indicator").style.background = "green";
+	console.log("Device connected to socket");
+	socket.send(
+		JSON.stringify({
+			phone: window.location.qs.phone,
+		})
+	);
+	// set status to connected
+	document.querySelector(".status-indicator").style.background = "green";
 };
 
 socket.onmessage = ({ data }) => {
-  try {
-    data = JSON.parse(data);
-  } catch {}
+	try {
+		data = JSON.parse(data);
+	} catch {}
 
-  if (data.message) {
-    let template = `
+	if (data.message) {
+		let template = `
       <div class="message flex row justify-content-start align-items-center mt-5">
         <div class="avatar circle flex row justify-content-center align-items-center mr-3">
           ${data.sender_name?.substring(0, 2)}
@@ -43,12 +50,12 @@ socket.onmessage = ({ data }) => {
         </div>
       </div>
     `;
-    list.innerHTML = template + list.innerHTML;
-  }
+		list.innerHTML = template + list.innerHTML;
+	}
 };
 
 socket.onclose = () => {
-  console.log("Device disconnected from socket");
-  // set status to idle
-  document.querySelector(".status-indicator").style.background = "grey";
+	console.log("Device disconnected from socket");
+	// set status to idle
+	document.querySelector(".status-indicator").style.background = "grey";
 };

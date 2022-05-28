@@ -11,7 +11,6 @@ Run a sendchamp simulator locally, to test your apps using sendchamp API without
 - [Timeline](#timeline)
 - [Contributing](#contributing)
 
-
 ## Quick start
 
 ![summary](/assets/summary.gif)
@@ -67,39 +66,47 @@ Ideally you would have a constant holding the sendchamp api base url before maki
 <br />
 
 ## Examples
+
 Pardon me 🙏, I only know how to write nodejs and golang fluently.
 
 **Nodejs with axios**
+
 ```javascript
 // use simulator url if in dev mode and live url in production
 const axios = require("axios");
 
-const BASE_URL = process.env.NODE_ENV === "development" ? "http://localhost:2920" : "https://api.sendchamp.com";
+const BASE_URL =
+	process.env.NODE_ENV === "development"
+		? "http://localhost:2920"
+		: "https://api.sendchamp.com";
 
 // Now lets start attacking the endpoints.
 // Lets send a text message to one of our simulators phone number.
 
 let options = {
-  to: "2349153207998",
-  message: "Pinging my simulator",
-  sender_name: "Sendchamp",
-  route: "dnd"
+	to: "2349153207998",
+	message: "Pinging my simulator",
+	sender_name: "Sendchamp",
+	route: "dnd",
 };
 
-axios.post("/api/v1/sms/send", options, {
-  baseURL: BASE_URL,
-  headers: {
-    // this doesn't neccessarily need to be a valid key.. anything works 😜. but if you want to use other endpoints like /wallet/wallet_balance you need to put a valid sendchamp public key, since those endpoints aren't intercepted and they go directly to api.sendchamp.com. 
-    "Authorization": "Bearer <sendchamp_key>",
-    "Accept": "application/json",
-    "Content-Type": "application/json"
-  }
-}).then((response) => {
-  // exactly as sendchamp would respond you 😉
-  console.log(response);
-}).catch((error) => {
-  console.error(error);
-});
+axios
+	.post("/api/v1/sms/send", options, {
+		baseURL: BASE_URL,
+		headers: {
+			// this doesn't neccessarily need to be a valid key.. anything works 😜. but if you want to use other endpoints like /wallet/wallet_balance you need to put a valid sendchamp public key, since those endpoints aren't intercepted and they go directly to api.sendchamp.com.
+			Authorization: "Bearer <sendchamp_key>",
+			Accept: "application/json",
+			"Content-Type": "application/json",
+		},
+	})
+	.then((response) => {
+		// exactly as sendchamp would respond you 😉
+		console.log(response);
+	})
+	.catch((error) => {
+		console.error(error);
+	});
 ```
 
 Now, let's check the simulator !.
@@ -116,26 +123,27 @@ And also in the console, we get the regular sendchamp response.
 const Sendchamp = require("sendchamp-sdk");
 
 const sendchamp = new Sendchamp({
-  publicKey: "sk_test_$lkdl$lksd...",
-  mode: "local-simulator"
+	publicKey: "sk_test_$lkdl$lksd...",
+	mode: "local-simulator",
 });
 
 const sms = sendchamp.SMS;
 
 const options = {
-  sender_name: "sendchamp.sdk",
-  to: "2349153207998",
-  message: "test from sendchamp-sdk",
-  route: "dnd"
+	sender_name: "sendchamp.sdk",
+	to: "2349153207998",
+	message: "test from sendchamp-sdk",
+	route: "dnd",
 };
 
-sms.send(options)
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+sms
+	.send(options)
+	.then((res) => {
+		console.log(res);
+	})
+	.catch((err) => {
+		console.log(err);
+	});
 ```
 
 ![sendchamp-sdk](/assets/js-sdk.png)
@@ -259,6 +267,7 @@ Currently the simulator works for all sms based requests. I am looking into also
 If you find any bugs or have a feature request, please file an issue on the [issue tracker](https://github.com/fuadop/sendchamp-simulator/issues), I'll be happy to help!.
 
 ## Contributing
+
 PRs are greatly appreciated, help us build this hugely needed tool so anyone else can easily test their apps using sendchamp.
 
 1. Create a fork
