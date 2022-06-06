@@ -1,4 +1,7 @@
 # Sendchamp Local simulator
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Run a sendchamp simulator locally, to test your apps using sendchamp API without having to spend a dime, you can also write your unit tests with this tool.
 
@@ -275,3 +278,23 @@ PRs are greatly appreciated, help us build this hugely needed tool so anyone els
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request 🚀
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://fuadolatunji.me"><img src="https://avatars.githubusercontent.com/u/65264054?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fuad Olatunji</b></sub></a><br /><a href="https://github.com/fuadop/sendchamp-simulator/issues?q=author%3Afuadop" title="Bug reports">🐛</a> <a href="https://github.com/fuadop/sendchamp-simulator/commits?author=fuadop" title="Code">💻</a> <a href="#infra-fuadop" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-fuadop" title="Maintenance">🚧</a> <a href="#design-fuadop" title="Design">🎨</a> <a href="#example-fuadop" title="Examples">💡</a> <a href="#security-fuadop" title="Security">🛡️</a> <a href="#tool-fuadop" title="Tools">🔧</a> <a href="#userTesting-fuadop" title="User Testing">📓</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

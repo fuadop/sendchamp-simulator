@@ -1,0 +1,32 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "fuadop",
+      "name": "Fuad Olatunji",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65264054?v=4",
+      "profile": "http://fuadolatunji.me",
+      "contributions": [
+        "bug",
+        "code",
+        "infra",
+        "maintenance",
+        "design",
+        "example",
+        "security",
+        "tool",
+        "userTesting"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "sendchamp-simulator",
+  "projectOwner": "fuadop",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
