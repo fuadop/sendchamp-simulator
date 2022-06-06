@@ -21,6 +21,24 @@
         "tool",
         "userTesting"
       ]
+    },
+    {
+      "login": "sadiqful",
+      "name": "Aliyu Abubakar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39303081?v=4",
+      "profile": "https://github.com/sadiqful",
+      "contributions": [
+        "blog",
+        "business",
+        "content",
+        "financial",
+        "ideas",
+        "mentoring",
+        "platform",
+        "question",
+        "tutorial",
+        "talk"
+      ]
     }
   ],
   "contributorsPerLine": 7,
