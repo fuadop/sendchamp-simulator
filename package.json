@@ -50,7 +50,7 @@
 		"node-cache": "^5.1.2",
 		"randomatic": "^3.1.1",
 		"uuid": "^8.3.2",
-		"ws": "^8.8.0"
+		"ws": "^8.8.1"
 	},
 	"devDependencies": {
 		"@types/koa-bodyparser": "^4.3.7",
