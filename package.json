@@ -37,7 +37,7 @@
 	"homepage": "https://github.com/fuadop/sendchamp-simulator#readme",
 	"dependencies": {
 		"@fuadop/koa-proxy": "^1.0.0",
-		"@koa/cors": "^3.3.0",
+		"@koa/cors": "^3.4.1",
 		"@koa/router": "^10.1.1",
 		"@types/uuid": "^8.3.4",
 		"koa": "^2.13.4",
