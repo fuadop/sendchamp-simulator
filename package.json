@@ -53,7 +53,7 @@
 		"ws": "^8.8.1"
 	},
 	"devDependencies": {
-		"@types/koa-bodyparser": "^4.3.7",
+		"@types/koa-bodyparser": "^4.3.8",
 		"@types/koa-json": "^2.0.20",
 		"@types/koa-logger": "^3.1.2",
 		"@types/koa-proxy": "^1.0.4",
